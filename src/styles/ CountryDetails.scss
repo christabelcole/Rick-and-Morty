@@ -1,10 +1,18 @@
-@import './variables';
-@import './mixins';
+@import './_variables.scss';
+@import './_mixins.scss';
 
 .country-details {
-  margin-top: 1rem;
+  padding: 15px;
+  background-color: $color-section-bg;
+  border: 1px solid $color-card-border;
+  @include box-shadow($color-card-border);
 
-  img {
-    width: 50px;
+  .country-name {
+    font-size: 20px;
+    color: $color-primary-heading;
+  }
+
+  .country-info {
+    color: $color-text;
   }
 }

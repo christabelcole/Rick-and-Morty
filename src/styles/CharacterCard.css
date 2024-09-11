@@ -1,14 +1,17 @@
 .character-card {
-  background-color: #F3F3F3;
-  color: #2C2C54;
-  border: 2px solid #97C93E;
+  background-color: #8A2BE2;
+  border: 1px solid #2CFFFF;
   border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px;
+  color: #E0E0E0;
+  box-shadow: 0 4px 8px rgba(44, 255, 255, 0.3);
 }
-.character-card img {
-  width: 100px;
-  border-radius: 50%;
+.character-card .character-name {
+  font-size: 18px;
+  color: #00FF00;
+  font-family: "Comic Sans MS", cursive;
+}
+.character-card .character-info {
+  color: #2CFFFF;
 }/*# sourceMappingURL=CharacterCard.css.map */

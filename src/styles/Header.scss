@@ -1,15 +1,14 @@
-@import './variables';
-@import './mixins';
+@import './_variables.scss';
+@import './_mixins.scss';
 
-.app-header {
-  background-color: $accent-color;
-  padding: 1rem;
+.header {
+  background-color: $color-navbar;
+  padding: 20px;
   text-align: center;
-  margin-bottom: 2rem;
-  @include card-shadow;
-
-  h1 {
-    font-family: $font-family;
-    color: $primary-color;
+  
+  .header-title {
+    font-size: 24px;
+    color: $color-primary-heading;
+    font-family: $font-secondary;
   }
 }

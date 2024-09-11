@@ -1,10 +1,14 @@
-@mixin card-shadow {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+// Reusable Mixins for Styling
+@mixin transition($property, $duration) {
+  transition: $property $duration ease-in-out;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-shadow($color) {
+  box-shadow: 0 4px 8px rgba($color, 0.3);
+}

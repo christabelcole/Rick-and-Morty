@@ -1,18 +1,22 @@
-@import './variables';
-@import './mixins';
+@import './_variables.scss';
+@import './_mixins.scss';
 
 .character-card {
-  background-color: $secondary-color;
-  color: $primary-color;
-  border: 2px solid $accent-color;
+  background-color: $color-section-bg;
+  border: 1px solid $color-card-border;
   border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem;
-  text-align: left;
-  @include card-shadow;
+  padding: 15px;
+  margin: 10px;
+  color: $color-text;
+  @include box-shadow($color-card-border);
 
-  img {
-    width: 100px;
-    border-radius: 50%;
+  .character-name {
+    font-size: 18px;
+    color: $color-primary-heading;
+    font-family: $font-secondary;
+  }
+
+  .character-info {
+    color: $color-secondary-heading;
   }
 }
