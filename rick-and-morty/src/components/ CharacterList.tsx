@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchCharacters } from '../services/api';
 import { Character } from '../types/Character';
-import CharacterCardContainer from '../containers/CharacterCardContainer'; // Corrected path
+import CharacterCardContainer from '../containers/CharacterCardContainer';
 import '../styles/App.scss';
 
 const CharacterListContainer: React.FC = () => {

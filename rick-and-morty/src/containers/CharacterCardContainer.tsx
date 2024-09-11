@@ -1,26 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Character } from '../types/Character';
-import { fetchCountries } from '../services/api';
-import CharacterCard from '../components/CharacterCard';
-import { Country } from '../types/Country';
 
-interface Props {
+interface CharacterCardContainerProps {
   character: Character;
 }
 
-const CharacterCardContainer: React.FC<Props> = ({ character }) => {
-  const [country, setCountry] = useState<Country | null>(null);
-
-  useEffect(() => {
-    const getCountry = async () => {
-      const countries = await fetchCountries();
-      const randomCountry = countries[Math.floor(Math.random() * countries.length)];
-      setCountry(randomCountry);
-    };
-    getCountry();
-  }, []);
-
-  return <CharacterCard character={character} country={country} />;
+const CharacterCardContainer: React.FC<CharacterCardContainerProps> = ({ character }) => {
+  return (
+    <div className="character-card">
+      <img src={character.image} alt={character.name} />
+      <h3>{character.name}</h3>
+      <p>{character.species}</p>
+    </div>
+  );
 };
 
 export default CharacterCardContainer;

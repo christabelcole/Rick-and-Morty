@@ -1,1 +1,1 @@
-{"version":3,"sources":["App.scss","_variables.scss","App.css"],"names":[],"mappings":"AAGA;EACE,yBCJc;EDKd,cCJgB;EDKhB,oCCHY;EDIZ,iBAAA;EACA,aAAA;EACA,kBAAA;AEFF","file":"App.css"}
+{"version":3,"sources":["App.scss","App.css"],"names":[],"mappings":"AACA;EACI,SAAA;EACA,8BAAA;EACA,sBAAA;EACA,WAAA;ACAJ;;ADGE;EACE,aAAA;EACA,sBAAA;EACA,iBAAA;ACAJ;;ADGE;EACE,sBAAA;EACA,WAAA;EACA,aAAA;EACA,kBAAA;ACAJ;;ADGE;EACE,aAAA;EACA,eAAA;EACA,SAAA;EACA,aAAA;ACAJ;;ADGE;EACE,sBAAA;EACA,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;ACAJ;;ADGE;EACE,eAAA;EACA,kBAAA;ACAJ","file":"App.css"}
