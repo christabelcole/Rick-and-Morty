@@ -7,7 +7,6 @@ import './styles/App.scss';
 import './styles/CharacterCard.scss';
 import './styles/Header.scss';
 
-
 const App: React.FC = () => {
   return (
     <div>

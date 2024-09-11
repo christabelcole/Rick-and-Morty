@@ -1,4 +1,3 @@
-// src/components/CharacterList.tsx
 import React, { useEffect, useState } from 'react';
 import CharacterCardContainer from '../containers/CharacterCardContainer'; // Corrected import path
 import { fetchCharacters } from '../services/api';
@@ -25,4 +24,3 @@ const CharacterList: React.FC = () => {
 };
 
 export default CharacterList;
-

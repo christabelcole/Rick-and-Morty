@@ -1,3 +1,46 @@
+.navbar {
+  background-color: #1c1c1c;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .navbar-title {
+  color: #50e3c2; /* Rick and Morty bright teal */
+  font-size: 2rem;
+  font-family: "Get Schwifty", sans-serif; /* Customized Rick and Morty-like font */
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.character-card {
+  background-color: #2f4f4f; /* Dark slate color */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffff; /* White text for contrast */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.character-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.character-card .character-name {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #50e3c2; /* Rick and Morty bright teal */
+}
+.character-card .character-details {
+  padding: 0.5rem;
+  color: #e3e3e3; /* Light grey for details */
+}
+
 body {
   background-color: #0B0C10;
   color: #E0E0E0;
