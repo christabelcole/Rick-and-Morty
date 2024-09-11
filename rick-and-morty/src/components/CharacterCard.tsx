@@ -1,4 +1,3 @@
-import React from 'react';
 import { Character } from '../types/Character';
 import { Country } from '../types/Country';
 import CountryDetails from './CountryDetails';

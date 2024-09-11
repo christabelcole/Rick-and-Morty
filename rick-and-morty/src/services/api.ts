@@ -1,14 +1,20 @@
-import axios from 'axios';
-
-const RICK_AND_MORTY_API = 'https://rickandmortyapi.com/api/character';
-const REST_COUNTRIES_API = 'https://restcountries.com/v3.1/all';
+// src/services/api.ts
+const API_URL = 'https://rickandmortyapi.com/api';
 
 export const fetchCharacters = async () => {
-  const response = await axios.get(RICK_AND_MORTY_API);
-  return response.data.results;
+  const response = await fetch(`${API_URL}/character`);
+  const data = await response.json();
+  return data.results;
 };
 
-export const fetchCountries = async () => {
-  const response = await axios.get(REST_COUNTRIES_API);
-  return response.data;
+export const fetchLocations = async () => {
+  const response = await fetch(`${API_URL}/location`);
+  const data = await response.json();
+  return data.results;
+};
+
+export const fetchEpisodes = async () => {
+  const response = await fetch(`${API_URL}/episode`);
+  const data = await response.json();
+  return data.results;
 };

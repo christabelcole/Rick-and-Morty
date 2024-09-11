@@ -1,22 +1,16 @@
 import React from 'react';
-import CharacterListContainer from './containers/CharacterListContainer';
-import './styles/App.scss';
+import CharacterList from './components/CharacterList';
+import LocationListContainer from './containers/LocationListContainer';
+import EpisodeListContainer from './containers/EpisodeListContainer';
 
 const App: React.FC = () => {
   return (
-    <div className="app">
-      <Navbar />
-      <CharacterListContainer />
+    <div>
+      <h1>Rick and Morty Universe</h1>
+      <CharacterList />
+      <LocationListContainer />
+      <EpisodeListContainer />
     </div>
-  );
-};
-
-// Basic Navbar Component
-const Navbar: React.FC = () => {
-  return (
-    <nav className="navbar">
-      <h1>Rick and Morty Universe Explorer</h1>
-    </nav>
   );
 };
 

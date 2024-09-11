@@ -1,0 +1,22 @@
+/* src/styles/LocationList.scss */
+.location-list {
+  padding: 20px;
+}
+.location-list .filters {
+  margin-bottom: 20px;
+}
+.location-list .filters select {
+  padding: 10px;
+  background-color: #00b5cc;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+}
+.location-list .location-card {
+  background-color: #3c3c3c;
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}/*# sourceMappingURL=LocationList.css.map */

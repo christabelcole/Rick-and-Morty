@@ -1,10 +1,10 @@
+// src/components/CharacterList.tsx
 import React, { useEffect, useState } from 'react';
+import CharacterCardContainer from '../containers/CharacterCardContainer'; // Corrected import path
 import { fetchCharacters } from '../services/api';
 import { Character } from '../types/Character';
-import CharacterCardContainer from '../containers/CharacterCardContainer';
-import '../styles/App.scss';
 
-const CharacterListContainer: React.FC = () => {
+const CharacterList: React.FC = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
 
   useEffect(() => {
@@ -24,4 +24,5 @@ const CharacterListContainer: React.FC = () => {
   );
 };
 
-export default CharacterListContainer;
+export default CharacterList;
+
