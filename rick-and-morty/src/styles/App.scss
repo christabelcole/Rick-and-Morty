@@ -1,0 +1,11 @@
+@import './variables';
+@import './mixins';
+
+.app-container {
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-family: $font-family;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}

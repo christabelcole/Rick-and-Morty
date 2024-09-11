@@ -1,0 +1,15 @@
+@import './variables';
+@import './mixins';
+
+.app-header {
+  background-color: $accent-color;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  @include card-shadow;
+
+  h1 {
+    font-family: $font-family;
+    color: $primary-color;
+  }
+}

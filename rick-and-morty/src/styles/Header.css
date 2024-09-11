@@ -1,0 +1,11 @@
+.app-header {
+  background-color: #97C93E;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.app-header h1 {
+  font-family: "Fira Sans", sans-serif;
+  color: #2C2C54;
+}/*# sourceMappingURL=Header.css.map */

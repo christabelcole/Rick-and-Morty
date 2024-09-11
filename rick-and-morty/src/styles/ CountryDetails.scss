@@ -1,0 +1,10 @@
+@import './variables';
+@import './mixins';
+
+.country-details {
+  margin-top: 1rem;
+
+  img {
+    width: 50px;
+  }
+}
