@@ -1,5 +1,5 @@
 import React from 'react';
-import CharacterListContainer from './components/CharacterList';
+import CharacterListContainer from './containers/CharacterListContainer';
 import './styles/App.scss';
 
 const App: React.FC = () => {
