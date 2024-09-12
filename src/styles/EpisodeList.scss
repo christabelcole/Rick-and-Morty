@@ -1,6 +1,8 @@
 /* src/styles/EpisodeList.scss */
+@import './variables';
 .episode-list {
     padding: 20px;
+    text-align: center;
     .filters {
       margin-bottom: 20px;
       select {
@@ -12,7 +14,7 @@
       }
     }
     .episode-card {
-      background-color: #3c3c3c;
+      background-color: $color-section-bg;
       color: #fff;
       padding: 15px;
       margin-bottom: 10px;

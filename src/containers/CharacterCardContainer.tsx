@@ -11,6 +11,7 @@ const CharacterCardContainer: React.FC<CharacterCardContainerProps> = ({ charact
       <img src={character.image} alt={character.name} />
       <h3>{character.name}</h3>
       <p>{character.species}</p>
+      <p>{character.gender}</p>
     </div>
   );
 };
