@@ -1,8 +1,12 @@
 /* src/styles/EpisodeList.scss */
 @import './variables';
 .episode-list {
-    padding: 20px;
-    text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  // gap: 20px; /* Adds space between the cards */
+  padding: 20px; /* Adds padding around the entire list */
+  text-align: center;
+  background: $color-section-bg;
     .filters {
       margin-bottom: 20px;
       select {

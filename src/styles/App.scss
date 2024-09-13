@@ -4,19 +4,34 @@
 @import './cards.scss';
 @import './Background.scss';
 
-
 body {
-  background-color: $color-background;
+  background: linear-gradient(to bottom, #000428, #004e92); /* Futuristic gradient background */
   color: $color-text;
   font-family: $font-primary;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .navbar {
-  background-color: $color-navbar;
+  background: linear-gradient(to bottom, #000428, #004e92);
+
+  top: 0;
+  width: 100%;
   padding: 10px 20px;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+  }
+
   .nav-item {
     color: $color-navbar-text;
     text-decoration: none;
@@ -26,11 +41,29 @@ body {
       color: $color-hover;
     }
   }
+
+  .nav-link {
+    color: #00e5ff; /* Neon blue */
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 16px;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .nav-link:hover {
+    color: #fff;
+    transform: scale(1.1);
+  }
 }
 
 h1, h2 {
   color: $color-primary-heading;
   font-family: $font-secondary;
+  text-align: center;
+  margin-top: 80px; /* Adjusted for navbar height */
+  font-size: 3em;
 }
 
 h3, h4, h5 {
@@ -72,22 +105,20 @@ a {
   border: 1px solid $color-card-border;
   border-radius: 5px;
   padding: 20px;
-  margin: 10px 0;
+  margin: 10px;
   color: $color-text;
   @include box-shadow($color-card-border);
+  width: 100%; /* Adjust width to fill the grid cell */
+  box-sizing: border-box;
 }
 
-.divider {
-  border-bottom: 1px solid $color-card-border;
-  margin: 20px 0;
+.character-list  {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+  margin-top: 20px;
 }
-
-.character-list {
-display: grid;
-grid-template-columns: repeat(4,minmax(0,1fr));
-
-}
-
 
 .stars {
   position: fixed;
@@ -96,6 +127,7 @@ grid-template-columns: repeat(4,minmax(0,1fr));
   overflow: hidden;
   z-index: 1;
 }
+
 .star {
   position: absolute;
   background-color: purple;
@@ -106,6 +138,7 @@ grid-template-columns: repeat(4,minmax(0,1fr));
       0 0 60px rgba(195, 0, 255, 0.6);
   animation: blink 3s infinite ease-in-out alternate;
 }
+
 @keyframes blink {
   0% {
       opacity: 0;

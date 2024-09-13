@@ -1,23 +1,31 @@
 import { Character } from '../types/Character';
-import { Country } from '../types/Country';
-import CountryDetails from './CountryDetails';
+import { useState } from 'react';
 import '../styles/CharacterCard.scss';
 
-interface Props {
+interface CharacterCardProps {
   character: Character;
-  country: Country | null;
 }
 
-const CharacterCard: React.FC<Props> = ({ character, country }) => {
+const CharacterCard: React.FC<CharacterCardProps> = ({ character }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   return (
-    <div className="character-card">
-      <h2>{character.name}</h2>
-      <p>{character.species} - {character.status} - {character.gender}</p>
-      <img src={character.image} alt={character.name} />
-      {country && <CountryDetails country={country} />}
+    <div className="card" onClick={handleFlip}>
+      <div className={`card-inner ${isFlipped ? 'flipped' : ''}`}>
+        <div className="card-front">
+          <h3>{character.name}</h3>
+          <img src={character.image} alt={character.name} />
+        </div>
+        <div className="card-back">
+          {/* <p>{character.description}</p> */}
+        </div>
+      </div>
     </div>
   );
 };
 
 export default CharacterCard;
-

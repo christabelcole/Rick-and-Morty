@@ -1,10 +1,15 @@
+// src/components/Navbar.tsx
 import React from 'react';
-import '../styles/_navbar.scss';
+import '../styles/Navbar.scss'; // Make sure this file exists
 
 const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
-      <h1 className="navbar-title">Rick and Morty Universe</h1>
+      <ul>
+        <li><a href="#characters" className="nav-link">Characters</a></li>
+        <li><a href="#locations" className="nav-link">Locations</a></li>
+        <li><a href="#episodes" className="nav-link">Episodes</a></li>
+      </ul>
     </nav>
   );
 };

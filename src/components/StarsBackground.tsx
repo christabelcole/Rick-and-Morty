@@ -1,6 +1,6 @@
 // src/components/StarsBackground.tsx
-import React, { useEffect } from 'react';
-import './styles/Background.scss'; // Import the SCSS file for styling
+import React, { useEffect } from 'react'; // Import useEffect from React
+import '../styles/Background.scss'; // Import the SCSS file for styling
 
 const StarsBackground: React.FC = () => {
   useEffect(() => {
