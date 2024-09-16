@@ -21,7 +21,10 @@ const CharacterCard: React.FC<CharacterCardProps> = ({ character }) => {
           <img src={character.image} alt={character.name} />
         </div>
         <div className="card-back">
-          {/* <p>{character.description}</p> */}
+          <p>Status: {character.status}</p>
+          <p>Species: {character.species}</p>
+          <p>Origin: {character.origin.name}</p>
+          <p>Location: {character.location.name}</p>
         </div>
       </div>
     </div>

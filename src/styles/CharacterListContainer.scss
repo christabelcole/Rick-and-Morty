@@ -1,0 +1,41 @@
+.character-list-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .search-bar {
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 600px;
+  
+      input[type='text'] {
+        width: calc(100% - 80px); /* Full width minus the button */
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+  
+      button {
+        width: 70px;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #8A2BE2;
+        color: white;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+    }
+  
+    .character-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px; /* Adjust spacing between cards */
+        padding: 20px; /* Padding around the grid */
+        justify-content: center; /* Centers the grid within the container */
+      }
+      
+    }

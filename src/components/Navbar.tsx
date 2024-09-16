@@ -1,15 +1,36 @@
-// src/components/Navbar.tsx
-import React from 'react';
-import '../styles/Navbar.scss'; // Make sure this file exists
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/_navbar.scss'; // Ensure this path is correct
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onSearch: (query: string) => void; // Function to handle search query
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
+  const [query, setQuery] = useState('');
+
+  const handleSearch = (event: React.FormEvent) => {
+    event.preventDefault();
+    onSearch(query); // Call the onSearch function with the query parameter
+  };
+
   return (
     <nav className="navbar">
-      <ul>
-        <li><a href="#characters" className="nav-link">Characters</a></li>
-        <li><a href="#locations" className="nav-link">Locations</a></li>
-        <li><a href="#episodes" className="nav-link">Episodes</a></li>
+      <div className="navbar-title">Rick and Morty Universe</div>
+      <ul className="navbar-links">
+        <li><Link to="/vite-react-rick-and-morty/">Characters</Link></li>
+        <li><Link to="/vite-react-rick-and-morty/locations">Locations</Link></li>
+        <li><Link to="/vite-react-rick-and-morty/episodes">Episodes</Link></li>
       </ul>
+      <form className="search-bar" onSubmit={handleSearch}>
+        <input 
+          type="text" 
+          value={query} 
+          onChange={(e) => setQuery(e.target.value)} 
+          placeholder="Characters"
+        />
+        <button type="submit">Search</button>
+      </form>
     </nav>
   );
 };

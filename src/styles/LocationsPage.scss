@@ -1,0 +1,49 @@
+/* Styling for the Locations Page */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: #8A2BE2;
+    color:  #8A2BE2;
+  
+    form {
+        background-color:  #8A2BE2;;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 600px;
+  
+      input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px 0 0 5px;
+        font-size: 16px;
+        outline: none;
+      }
+  
+      button {
+        padding: 10px 20px;
+        border: 1px solid #8A2BE2;
+        border-radius: 0 5px 5px 0;
+        background-color: #8A2BE2;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #6a1b9a;
+        }
+      }
+    }
+  }
+  

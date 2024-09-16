@@ -1,35 +1,22 @@
 import React from 'react';
-import CharacterList from './components/CharacterList';
-import LocationListContainer from './containers/LocationListContainer';
-import EpisodeListContainer from './containers/EpisodeListContainer';
-
-import './styles/App.scss';
-import './styles/CharacterCard.scss';
-import './styles/Header.scss';
-
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CharacterListContainer from './containers/CharacterListContainer'; // Make sure this path is correct
+import LocationsPage from './pages/LocationsPage'; // Make sure this file exists and is correctly named
+import EpisodesPage from './pages/EpisodesPage'; // Make sure this file exists and is correctly named
+import Navbar from './components/Navbar'; // Make sure this file exists and is correctly named
+import './styles/App.scss'; // Ensure this file exists and is correctly named
 
 const App: React.FC = () => {
   return (
-    <div>
-      <header className="navbar">
-        <h1>Rick and Morty Universe</h1>
-        <ul>
-          <li><a href="#characters" className="nav-link">Characters</a></li>
-          <li><a href="#locations" className="nav-link">Locations</a></li>
-          <li><a href="#episodes" className="nav-link">Episodes</a></li>
-        </ul>
-      </header>
-      <div id="characters">
-        <CharacterList />
-      </div>
-      <div id="locations">
-        <LocationListContainer />
-      </div>
-      <div id="episodes">
-        <EpisodeListContainer />
-      </div>
-    </div>
+    <Router>
+      <Navbar onSearch={() => {}} />
+      <Routes>
+        <Route path= "/vite-react-rick-and-morty/" element={<CharacterListContainer />} />
+        <Route path="/vite-react-rick-and-morty/locations" element={<LocationsPage />} />
+        <Route path="/vite-react-rick-and-morty/episodes" element={<EpisodesPage />} />
+        {/* <Route path="/" element={<CharacterListContainer />} /> Default route */}
+      </Routes>
+    </Router>
   );
 };
 
