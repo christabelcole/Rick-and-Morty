@@ -11,9 +11,9 @@ const App: React.FC = () => {
     <Router>
       <Navbar onSearch={() => {}} />
       <Routes>
-        <Route path= "/vite-react-rick-and-morty/" element={<CharacterListContainer />} />
-        <Route path="/vite-react-rick-and-morty/locations" element={<LocationsPage />} />
-        <Route path="/vite-react-rick-and-morty/episodes" element={<EpisodesPage />} />
+        <Route path= "/Rick-and-Morty" element={<CharacterListContainer />} />
+        <Route path="/Rick-and-Morty/locations" element={<LocationsPage />} />
+        <Route path="/Rick-and-Morty/episodes" element={<EpisodesPage />} />
         {/* <Route path="/" element={<CharacterListContainer />} /> Default route */}
       </Routes>
     </Router>
