@@ -18,9 +18,9 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
     <nav className="navbar">
       <div className="navbar-title">Rick and Morty Universe</div>
       <ul className="navbar-links">
-        <li><Link to="/vite-react-rick-and-morty/">Characters</Link></li>
-        <li><Link to="/vite-react-rick-and-morty/locations">Locations</Link></li>
-        <li><Link to="/vite-react-rick-and-morty/episodes">Episodes</Link></li>
+        <li><Link to="/Rick-and-Morty/">Characters</Link></li>
+        <li><Link to="/Rick-and-Morty/locations">Locations</Link></li>
+        <li><Link to="/Rick-and-Morty/episodes">Episodes</Link></li>
       </ul>
       <form className="search-bar" onSubmit={handleSearch}>
         <input 
