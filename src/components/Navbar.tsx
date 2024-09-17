@@ -36,3 +36,4 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
 };
 
 export default Navbar;
+
